@@ -2,15 +2,17 @@
 
 This is guide how to install and configure necessary components to use Gstreamer to output video from Basler Camera.  
 
-Tested with:
+Tested with following setup:
+| Component     | Version       |
+| ------------- |:-------------:| 
+| Windows       | 10            | 
+| Basler Pylon  | 6.3.0         | 
+| Gstreamer	    | 1.18.5        | 
+| CMake         | 3.22.1        | 
+| Visual Studio | 2022 Community edition | 
 
-Windows 10
 
-Basler Pylon 6.3.0
-
-Gstreamer 1.18.5
-
-Visual Studio 2022 Community Edition
+*Visual Studio 2022
  - At least component "C++ CMake Tools for Windows" and its dependencies must be installed
  - Basler Dart daa3840-45uc USB3-camera
 
