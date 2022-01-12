@@ -93,12 +93,13 @@ Final output should be something like this:
 
 # Example Gstreamer pipelines 
 
-## Show video from camera on screen. Parameters are supplied within pipeline command.
+## 1. Show video from camera on screen. Parameters are supplied within pipeline command.
 ```
 gst-launch-1.0 pylonsrc width=3840 height=2160 centerx=true centery=t acquisitionframerateenable=true fps=25 lightsource=5000k autoexposure=continuous exposurelowerlimit=250 exposureupperlimit=100000 autowhitebalance=continuous autogain=continuous gainupperlimit=40 gainlowerlimit=0 autobrightnesstarget=0.3 ! bayer2rgb ! videoconvert ! autovideosink
 ```
 
-## Show video from camera on screen. Parameters are supplied from configuration file. Configuration file can be generated using Basler Pylon viewer.
+## 2. Show video from camera on screen. Parameters are supplied from configuration file. Configuration file can be generated using Basler Pylon viewer.
 ```
 gst-launch-1.0 pylonsrc config-file=40122260.pfs ! bayer2rgb ! videoconvert ! autovideosink
 ```
+
