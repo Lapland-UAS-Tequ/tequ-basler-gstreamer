@@ -23,9 +23,26 @@ Visual Studio 2022
 
 https://www.baslerweb.com/en/products/software/basler-pylon-camera-software-suite/
 
+Direct links:
+
+Pylon 6.3.0 Camera Software Suite:
+
+https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/gstreamer-1.0-msvc-x86_64-1.18.5.msi
+
+Pylon 6.3.0 Runtime:
+
+https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/pylon_Runtime_6.3.0.23157.exe
+
 ## 2. Install Gstreamer
 
 https://gstreamer.freedesktop.org/download/
+
+Direct links:
+
+https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/gstreamer-1.0-msvc-x86_64-1.18.5.msi
+
+https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/gstreamer-1.0-devel-msvc-x86_64-1.18.5.msi
+
 
 ADD following Gstreamer paths to 'PATH' environment variable. For example:
 ```
@@ -48,7 +65,11 @@ git clone https://github.com/Lapland-UAS-Tequ/gst-plugins-vision.git
 
 ## 4. Install Cmake 
 
-https://github.com/Kitware/CMake/releases/download/v3.22.1/cmake-3.22.1-windows-x86_64.msi
+Download and install Cmake
+
+https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/cmake-3.22.1-windows-x86_64.msi
+
+Configure, build and install "gst-plugins-vision"
 
 1. Where is source code: "c:\gst-plugins-vision"
 
@@ -122,19 +143,25 @@ gst-launch-1.0 pylonsrc config-file=40122260.pfs ! queue ! bayer2rgb ! queue ! j
 
 ## Example 5. Publish video to simple-rtsp-server
 
-Install and start rtsp-simple-server.
+Download extract and start rtsp-simple-server.
+
+https://github.com/aler9/rtsp-simple-server
+
+Direct download link:
+
+https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/rtsp-simple-server.7z
 
 Connect to stream with VLC 
 
 rtsp://localhost:8554/mystream
 
 
-Basic x264 encoder
+Basic H264 encoder
 ```
 gst-launch-1.0 pylonsrc config-file=40122260.pfs ! queue ! bayer2rgb ! queue ! videoconvert ! queue ! x264enc tune=zerolatency ! rtspclientsink location=rtsp://localhost:8554/mystream
 ```
 
-NVIDIA specific x264 encoder
+NVIDIA specific H264 encoder
 ```
 gst-launch-1.0 pylonsrc config-file=40122260.pfs ! queue ! bayer2rgb ! queue ! videoconvert ! queue ! nvh264enc ! rtspclientsink location=rtsp://localhost:8554/mystream
 ```
