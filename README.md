@@ -107,3 +107,8 @@ Parameters are supplied from configuration file. Configuration file can be gener
 gst-launch-1.0 pylonsrc config-file=40122260.pfs ! bayer2rgb ! videoconvert ! autovideosink
 ```
 
+## Example 3. Output JPEG stream to TCP server
+```
+gst-launch-1.0 pylonsrc config-file=40122260.pfs ! bayer2rgb ! jpegenc ! queue ! tcpclientsink port=55555
+```
+
