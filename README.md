@@ -80,7 +80,7 @@ C:\gstreamer\1.0\x86_64
 git clone https://github.com/Lapland-UAS-Tequ/gst-plugins-vision.git
 ```
 
-## 5. Install Cmake 
+## 5. Build and install "gst-plugins-vision" with Cmake 
 
 Download and install Cmake
 
