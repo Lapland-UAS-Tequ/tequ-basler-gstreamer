@@ -4,11 +4,15 @@ This is guide how to install and configure necessary components to use Gstreamer
 
 Tested with:
 Windows 10
+
 Basler Pylon 6.3.0
+
 Gstreamer 1.18.5
+
 Visual Studio 2022 Community Edition
  - At least component "C++ CMake Tools for Windows" and its dependencies must be installed
-- Basler Dart daa3840-45uc USB3-camera
+ - Basler Dart daa3840-45uc USB3-camera
+
 CMake 3.22.1
 
 
