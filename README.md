@@ -10,16 +10,14 @@ Tested with following setup:
 | Gstreamer	    | 1.18.5        | 
 | CMake         | 3.22.1        | 
 | Visual Studio | 2022 Community edition | 
+| Camera        | daa3840-45uc | 
 
 
-*Visual Studio 2022
+Visual Studio 2022
  - At least component "C++ CMake Tools for Windows" and its dependencies must be installed
- - Basler Dart daa3840-45uc USB3-camera
-
-CMake 3.22.1
 
 
-# Windows 10 machine
+# Configuration for Windows 10 machine
 
 ## 1. Install Basler pylon software
 
@@ -87,7 +85,7 @@ Final output should be something like this:
 
 9. Pylon plugin for Gstreamer is ready to use
 
-# Linux machine
+# Configuration for Linux machine
 
 TBD
 
