@@ -112,3 +112,10 @@ gst-launch-1.0 pylonsrc config-file=40122260.pfs ! bayer2rgb ! videoconvert ! au
 gst-launch-1.0 pylonsrc config-file=40122260.pfs ! bayer2rgb ! jpegenc ! queue ! tcpclientsink port=55555
 ```
 
+## Example 4. Server JPEG stream as TCP server
+
+Connect with VLC tcp://localhost:8081
+
+```
+gst-launch-1.0 pylonsrc config-file=40122260.pfs ! bayer2rgb ! jpegenc ! queue ! tcpserversink port=8081
+```
