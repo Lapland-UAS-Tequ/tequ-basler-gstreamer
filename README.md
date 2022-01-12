@@ -104,20 +104,20 @@ gst-launch-1.0 pylonsrc width=3840 height=2160 centerx=true centery=t acquisitio
 
 Parameters are supplied from configuration file. Configuration file can be generated using Basler Pylon viewer. 
 ```
-gst-launch-1.0 pylonsrc config-file=40122260.pfs ! bayer2rgb ! videoconvert ! autovideosink
+gst-launch-1.0 pylonsrc config-file=40122260.pfs ! queue ! bayer2rgb ! queue ! videoconvert ! autovideosink
 ```
 
 ## Example 3. Output JPEG stream to TCP server
 ```
-gst-launch-1.0 pylonsrc config-file=40122260.pfs ! bayer2rgb ! jpegenc ! queue ! tcpclientsink port=55555
+gst-launch-1.0 pylonsrc config-file=40122260.pfs ! queue ! bayer2rgb ! queue ! jpegenc ! tcpclientsink port=55555
 ```
 
-## Example 4. Server JPEG stream as TCP server
+## Example 4. Serve JPEG stream as TCP server
 
 Connect with VLC tcp://localhost:8081
 
 ```
-gst-launch-1.0 pylonsrc config-file=40122260.pfs ! bayer2rgb ! jpegenc ! queue ! tcpserversink port=8081
+gst-launch-1.0 pylonsrc config-file=40122260.pfs ! queue ! bayer2rgb ! queue ! jpegenc ! tcpserversink port=55555
 ```
 
 ## Example 5. Publish video to simple-rtsp-server
@@ -131,12 +131,21 @@ rtsp://localhost:8554/mystream
 
 Basic x264 encoder
 ```
-gst-launch-1.0 pylonsrc config-file=40122260.pfs ! queue ! bayer2rgb ! queue ! videoconvert ! queue ! x264enc tune=zerolatency !  queue ! rtspclientsink location=rtsp://localhost:8554/mystream
+gst-launch-1.0 pylonsrc config-file=40122260.pfs ! queue ! bayer2rgb ! queue ! videoconvert ! queue ! x264enc tune=zerolatency ! rtspclientsink location=rtsp://localhost:8554/mystream
 ```
 
 NVIDIA specific x264 encoder
 ```
-gst-launch-1.0 pylonsrc config-file=40122260.pfs ! queue ! bayer2rgb ! queue ! videoconvert ! queue ! nvh264enc !  queue ! rtspclientsink location=rtsp://localhost:8554/mystream
+gst-launch-1.0 pylonsrc config-file=40122260.pfs ! queue ! bayer2rgb ! queue ! videoconvert ! queue ! nvh264enc ! rtspclientsink location=rtsp://localhost:8554/mystream
 ```
+
+## Example 6. Use multiple sinks.
+
+This pipeline publishes Basler camera video to TCP and RTSP and show on local screen. RTSP video stream is scaled to 960x540 from original 4k resolution.
+
+```
+gst-launch-1.0 pylonsrc config-file=40122260.pfs ! queue ! bayer2rgb ! tee name=t t. ! queue ! jpegenc ! tcpclientsink port=55555 t. ! queue ! videoscale ! video/x-raw,width=960,height=540 ! queue ! videoconvert ! queue ! nvh264enc ! rtspclientsink location=rtsp://localhost:8554/40122260 t. ! queue ! videoconvert ! queue ! autovideosink
+```
+
 
 
