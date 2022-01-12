@@ -141,10 +141,14 @@ gst-launch-1.0 pylonsrc config-file=40122260.pfs ! queue ! bayer2rgb ! queue ! v
 
 ## Example 6. Use multiple sinks.
 
-This pipeline publishes Basler camera video to TCP and RTSP and show on local screen. RTSP video stream is scaled to 960x540 from original 4k resolution.
+This pipeline publishes Basler camera video to TCP and RTSP and show on local screen. 
+
+RTSP and TCP video streams are scaled to 1920x1080 from original 4k resolution.
+
+Local screen video is 4k resolution.
 
 ```
-gst-launch-1.0 pylonsrc config-file=40122260.pfs ! queue ! bayer2rgb ! tee name=t t. ! queue ! jpegenc ! tcpclientsink port=55555 t. ! queue ! videoscale ! video/x-raw,width=960,height=540 ! queue ! videoconvert ! queue ! nvh264enc ! rtspclientsink location=rtsp://localhost:8554/40122260 t. ! queue ! videoconvert ! queue ! autovideosink
+gst-launch-1.0 pylonsrc config-file=C:\\Users\\juha.autioniemi\\Desktop\\svn\\tequ\\dev\\Python\\apps\\tequ-basler-app\\configurations\\40122260.pfs ! queue ! bayer2rgb ! tee name=t t. ! queue ! videoscale ! video/x-raw,width=960,height=540 ! jpegenc ! queue ! tcpclientsink port=55555 t. ! queue ! videoscale ! video/x-raw,width=960,height=540 ! queue ! videoconvert ! queue ! nvh264enc ! queue ! rtspclientsink location=rtsp://localhost:8554/40122260 t. ! queue ! videoconvert ! queue ! autovideosink
 ```
 
 
