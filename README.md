@@ -119,3 +119,15 @@ Connect with VLC tcp://localhost:8081
 ```
 gst-launch-1.0 pylonsrc config-file=40122260.pfs ! bayer2rgb ! jpegenc ! queue ! tcpserversink port=8081
 ```
+
+## Example 5. Publish video to simple-rtsp-server
+
+Install and start rtsp-simple-server.
+
+Connect to stream with VLC 
+
+rtsp://localhost:8554/mystream
+
+```
+gst-launch-1.0 pylonsrc config-file=40122260.pfs ! queue ! bayer2rgb ! queue ! videoconvert ! queue ! x264enc tune=zerolatency !  queue ! rtspclientsink location=rtsp://localhost:8554/mystream
+```
