@@ -107,10 +107,20 @@ Final output should be something like this:
 9. Pylon plugin for Gstreamer is ready to use
 
 # Configuration for Linux machine
-
 ## TBD
 ## 1.
 ## 2.
+
+# Configuration for Raspberry PI 4
+## TBD
+## 1.
+## 2.
+
+# Configuration for NVIDIA Jetson NX / Nano
+## TBD
+## 1.
+## 2.
+
 
 # Example Gstreamer pipelines 
 
