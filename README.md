@@ -87,14 +87,9 @@ Final output should be something like this:
 
 # Configuration for Linux machine
 
-TBD
-
-
-
-
-
-
-
+## TBD
+## 1.
+## 2.
 
 # Example Gstreamer pipelines 
 
