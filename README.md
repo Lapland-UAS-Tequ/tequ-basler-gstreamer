@@ -1,6 +1,14 @@
 # tequ-basler-gstreamer
 
-This is guide how to install and configure necessary components to use Gstreamer to output video from Basler Camera.  
+This is guide how to install and configure necessary components to use Gstreamer to output video data from Basler Cameras. Examples are tested with Basler Dart daa3840-45uc with USB 3.0 interface and Basler ace acA2500-14gm camera with GigE interface.
+
+Check these links for basics:
+
+https://www.baslerweb.com/en/vision-campus/interfaces-and-standards/usb3/
+
+https://www.baslerweb.com/en/vision-campus/interfaces-and-standards/gigabit-ethernet/
+
+If you have problems connecting to cameras or keep losing fraimes, check that your hardware and cables are GigE or USB3 Vision compatible.
 
 Tested with following setup:
 | Component     | Version       |
@@ -10,7 +18,8 @@ Tested with following setup:
 | Gstreamer	    | 1.18.5        | 
 | CMake         | 3.22.1        | 
 | Visual Studio | 2022 Community edition | 
-| Camera        | daa3840-45uc | 
+| Camera        | daa3840-45uc  | 
+| Camera        | acA2500-14gm  | 
 
 
 Visual Studio 2022
