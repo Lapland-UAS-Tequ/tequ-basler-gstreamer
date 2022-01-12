@@ -128,6 +128,15 @@ Connect to stream with VLC
 
 rtsp://localhost:8554/mystream
 
+
+Basic x264 encoder
 ```
 gst-launch-1.0 pylonsrc config-file=40122260.pfs ! queue ! bayer2rgb ! queue ! videoconvert ! queue ! x264enc tune=zerolatency !  queue ! rtspclientsink location=rtsp://localhost:8554/mystream
 ```
+
+NVIDIA specific x264 encoder
+```
+gst-launch-1.0 pylonsrc config-file=40122260.pfs ! queue ! bayer2rgb ! queue ! videoconvert ! queue ! nvh264enc !  queue ! rtspclientsink location=rtsp://localhost:8554/mystream
+```
+
+
