@@ -42,7 +42,15 @@ Pylon 6.3.0 Runtime:
 
 https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/pylon_Runtime_6.3.0.23157.exe
 
-## 2. Install Gstreamer
+## 2. Test your setup with Pylon viewer
+
+Open Pylon viewer. Search camera from devices list. Connect to camera, test it and configure features.
+
+Finally Export features file.
+
+Tools -> Save Features.
+
+## 3. Install Gstreamer
 
 https://gstreamer.freedesktop.org/download/
 
@@ -66,13 +74,13 @@ Add system variable “GSTREAMER_DIR” with following path:
 C:\gstreamer\1.0\x86_64
 ```
 
-## 3. Clone gst-plugins-vision 
+## 4. Clone gst-plugins-vision 
 
 ```
 git clone https://github.com/Lapland-UAS-Tequ/gst-plugins-vision.git
 ```
 
-## 4. Install Cmake 
+## 5. Install Cmake 
 
 Download and install Cmake
 
