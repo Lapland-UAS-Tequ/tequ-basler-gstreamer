@@ -1,3 +1,9 @@
+This resource is developed in Fish-IoT project
+
+https://www.tequ.fi/en/project-bank/fish-iot/ 
+
+---
+
 # tequ-basler-gstreamer
 
 This is guide how to install and configure necessary components to use Gstreamer to output video data from Basler Cameras. Examples are tested with Basler Dart daa3840-45uc with USB 3.0 interface and Basler ace acA2500-14gm camera with GigE interface.
