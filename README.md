@@ -131,21 +131,21 @@ Final output should be something like this:
 
 # Configuration for NVIDIA Jetson NX / Nano
 
+Configuring Jetson for GStreamer with Basler cameras is bit different. Please see configuration steps at following repository:
+
 https://github.com/Lapland-UAS-Tequ/tequ-jetson-basler
 
 # Configuration for Raspberry PI 4
-## TBD
-## 1.
-## 2.
 
-
+TBD
 
 
 # Example Gstreamer pipelines 
 
 ## Example 1. Show video from camera on screen. 
 
-Parameters are supplied within pipeline command. Check https://github.com/Lapland-UAS-Tequ/gst-plugins-vision/blob/master/sys/pylon/gstpylonsrc.c for parameter names and use Pylon viewer to test and find out values for parameters. This example pipeline uses automatic values which work in many cases.
+Parameters are supplied within pipeline command. Check https://github.com/Lapland-UAS-Tequ/gst-plugins-vision/blob/master/sys/pylon/gstpylonsrc.c for parameter names and use Pylon viewer to test and find out values for parameters. If you have YUV pixel format at camera, then you dont need to use "bayer2rgb". In any case you need to check that your camera supports parameters and their values you are providing. 
+
 ```
 gst-launch-1.0 pylonsrc width=3840 height=2160 centerx=true centery=t acquisitionframerateenable=true fps=25 lightsource=5000k autoexposure=continuous exposurelowerlimit=250 exposureupperlimit=100000 autowhitebalance=continuous autogain=continuous gainupperlimit=40 gainlowerlimit=0 autobrightnesstarget=0.3 ! bayer2rgb ! videoconvert ! autovideosink
 ```
@@ -207,5 +207,20 @@ Local screen video is 4k resolution.
 gst-launch-1.0 pylonsrc config-file=C:\\Users\\juha.autioniemi\\Desktop\\svn\\tequ\\dev\\Python\\apps\\tequ-basler-app\\configurations\\40122260.pfs ! queue ! bayer2rgb ! tee name=t t. ! queue ! videoscale ! video/x-raw,width=960,height=540 ! queue ! jpegenc ! queue ! tcpclientsink port=55555 t. ! queue ! videoscale ! video/x-raw,width=960,height=540 ! queue ! videoconvert ! queue ! nvh264enc ! queue ! rtspclientsink location=rtsp://localhost:8554/40122260 t. ! queue ! videoconvert ! queue ! autovideosink
 ```
 
+## Example 7. Show video on Ubuntu desktop in Jetson. (YUV pixel format)
 
+```
+gst-launch-1.0 pylonsrc ! queue ! nvvidconv ! xvimagesink
+```
+
+## Example 8. Show video on Ubuntu desktop in Jetson. (bayer pixel format)
+
+```
+gst-launch-1.0 pylonsrc ! queue ! bayer2rgb ! queue ! nvvidconv ! xvimagesink
+```
+
+## Example 9. Convert video stream from camera to JPEG image stream to TCP port 55555. (YUV)
+```
+gst-launch-1.0 pylonsrc config-file=config.pfs ! queue ! nvvidconv ! nvjpegenc ! queue ! tcpclientsink port=55555
+```
 
