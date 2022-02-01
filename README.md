@@ -137,8 +137,9 @@ https://github.com/Lapland-UAS-Tequ/tequ-jetson-basler
 
 # Configuration for Raspberry PI 4
 
-TBD
+Check this repository for Raspberry PI 4:
 
+https://github.com/Lapland-UAS-Tequ/tequ-rpi-setup
 
 # Example Gstreamer pipelines 
 
