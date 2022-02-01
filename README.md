@@ -224,3 +224,16 @@ gst-launch-1.0 pylonsrc ! queue ! bayer2rgb ! queue ! nvvidconv ! xvimagesink
 gst-launch-1.0 pylonsrc config-file=config.pfs ! queue ! nvvidconv ! nvjpegenc ! queue ! tcpclientsink port=55555
 ```
 
+# Notes
+
+If you are missing some libraries, here are some ways to install them:
+
+bad-plugins 
+```
+sudo apt-get install gstreamer1.0-plugins-bad
+```
+
+RTSP
+```
+sudo apt-get install gstreamer1.0-rtsp
+```
