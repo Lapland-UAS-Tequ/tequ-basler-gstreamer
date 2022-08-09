@@ -92,6 +92,8 @@ Download and install Cmake
 
 https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/cmake-3.22.1-windows-x86_64.msi
 
+Open CMake application.
+
 Configure, build and install "gst-plugins-vision"
 
 1. Where is source code: "c:\gst-plugins-vision"
