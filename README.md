@@ -77,7 +77,7 @@ C:\gstreamer\1.0\msvc_x86_64\lib\gstreamer-1.0
 Add system variable “GSTREAMER_DIR” with following path:
 
 ```
-C:\gstreamer\1.0\x86_64
+C:\gstreamer\1.0\msvc_x86_64
 ```
 
 ## 4. Clone gst-plugins-vision 
