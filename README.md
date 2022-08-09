@@ -42,7 +42,7 @@ Direct links:
 
 Pylon 6.3.0 Camera Software Suite:
 
-https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/gstreamer-1.0-msvc-x86_64-1.18.5.msi
+https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/Basler_pylon_6.3.0.23157.exe
 
 Pylon 6.3.0 Runtime:
 
