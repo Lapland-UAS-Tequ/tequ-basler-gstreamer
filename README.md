@@ -82,11 +82,13 @@ C:\gstreamer\1.0\msvc_x86_64
 
 ## 4. Clone gst-plugins-vision 
 
-```Basler has released official GStreamer Plug-in at 9th September 2022
+
+
+Basler has released official GStreamer Plug-in at 9th September 2022
 
 https://www.baslerweb.com/en/company/news-press/news/pylon-gstreamer-plug-in-for-basler-cameras/877440/
 
-https://github.com/basler/gst-plugin-pylon```
+https://github.com/basler/gst-plugin-pylon
 
 
 ```
