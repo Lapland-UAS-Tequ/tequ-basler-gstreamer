@@ -4,16 +4,6 @@ https://www.tequ.fi/en/project-bank/fish-iot/
 
 ---
 
-**************************************************
-
-Basler has released official GStreamer Plug-in at 9th September 2022
-
-https://www.baslerweb.com/en/company/news-press/news/pylon-gstreamer-plug-in-for-basler-cameras/877440/
-
-https://github.com/basler/gst-plugin-pylon
-
-**************************************************
-
 # tequ-basler-gstreamer
 
 This is guide how to install and configure necessary components to use Gstreamer to output video data from Basler Cameras. Examples are tested with Basler Dart daa3840-45uc with USB 3.0 interface and Basler ace acA2500-14gm camera with GigE interface.
@@ -36,7 +26,6 @@ Tested with following setup:
 | Visual Studio | 2022 Community edition | 
 | Camera        | daa3840-45uc  | 
 | Camera        | acA2500-14gm  | 
-
 
 Visual Studio 2022
  - At least component "C++ CMake Tools for Windows" and its dependencies must be installed
@@ -90,7 +79,15 @@ Add system variable “GSTREAMER_DIR” with following path:
 C:\gstreamer\1.0\msvc_x86_64
 ```
 
+
 ## 4. Clone gst-plugins-vision 
+
+```Basler has released official GStreamer Plug-in at 9th September 2022
+
+https://www.baslerweb.com/en/company/news-press/news/pylon-gstreamer-plug-in-for-basler-cameras/877440/
+
+https://github.com/basler/gst-plugin-pylon```
+
 
 ```
 git clone https://github.com/Lapland-UAS-Tequ/gst-plugins-vision.git
