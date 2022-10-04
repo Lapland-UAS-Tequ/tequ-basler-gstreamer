@@ -17,6 +17,7 @@ https://www.baslerweb.com/en/vision-campus/interfaces-and-standards/gigabit-ethe
 If you have problems connecting to cameras or keep losing fraimes, check that your hardware and cables are GigE or USB3 Vision compatible.
 
 Tested with following setup:
+
 | Component     | Version       |
 | ------------- |:-------------:| 
 | Windows       | 10            | 
@@ -29,6 +30,17 @@ Tested with following setup:
 
 Visual Studio 2022
  - At least component "C++ CMake Tools for Windows" and its dependencies must be installed
+
+
+*******************************************************************************************************
+
+Basler has released official GStreamer Plug-in at 9th September 2022
+
+https://www.baslerweb.com/en/company/news-press/news/pylon-gstreamer-plug-in-for-basler-cameras/877440/
+
+https://github.com/basler/gst-plugin-pylon
+
+*******************************************************************************************************
 
 
 # Configuration for Windows 10 machine
@@ -81,15 +93,6 @@ C:\gstreamer\1.0\msvc_x86_64
 
 
 ## 4. Clone gst-plugins-vision 
-
-
-
-Basler has released official GStreamer Plug-in at 9th September 2022
-
-https://www.baslerweb.com/en/company/news-press/news/pylon-gstreamer-plug-in-for-basler-cameras/877440/
-
-https://github.com/basler/gst-plugin-pylon
-
 
 ```
 git clone https://github.com/Lapland-UAS-Tequ/gst-plugins-vision.git
