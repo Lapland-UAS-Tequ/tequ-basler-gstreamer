@@ -4,6 +4,16 @@ https://www.tequ.fi/en/project-bank/fish-iot/
 
 ---
 
+**************************************************
+
+Basler has released official GStreamer Plug-in at 9th September 2022
+
+https://www.baslerweb.com/en/company/news-press/news/pylon-gstreamer-plug-in-for-basler-cameras/877440/
+
+https://github.com/basler/gst-plugin-pylon
+
+**************************************************
+
 # tequ-basler-gstreamer
 
 This is guide how to install and configure necessary components to use Gstreamer to output video data from Basler Cameras. Examples are tested with Basler Dart daa3840-45uc with USB 3.0 interface and Basler ace acA2500-14gm camera with GigE interface.
