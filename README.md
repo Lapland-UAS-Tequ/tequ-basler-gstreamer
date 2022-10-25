@@ -23,7 +23,6 @@ Tested with following setup:
 | Windows       | 10            | 
 | Basler Pylon  | 7.2.0.25592   | 
 | Gstreamer	    | 1.20.4        | 
-|
 | Camera        | daa3840-45uc  | 
 | Camera        | acA2500-14gm  | 
 
