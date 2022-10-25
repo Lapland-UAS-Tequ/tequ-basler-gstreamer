@@ -40,11 +40,11 @@ Direct links:
 
 Pylon 7.2.0 Camera Software Suite:
 
-https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/Basler_pylon_6.3.0.23157.exe
+https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/Basler_pylon_7.2.0.25592.exe
 
 Pylon 7.2.0 Runtime:
 
-https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/pylon_Runtime_6.3.0.23157.exe
+https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/pylon_Runtime_7.2.0.25592.exe
 
 ## 2. Test your setup with Pylon viewer
 
