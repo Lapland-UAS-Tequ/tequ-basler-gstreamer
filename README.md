@@ -158,34 +158,3 @@ Local screen video is 4k resolution.
 ```
 gst-launch-1.0 pylonsrc pfs-location=40257292.pfs device-serial-number="40257292" ! queue ! bayer2rgb ! tee name=t t. ! queue ! videoscale ! video/x-raw,width=960,height=540 ! queue ! jpegenc ! queue ! tcpclientsink port=55555 t. ! queue ! videoscale ! video/x-raw,width=960,height=540 ! queue ! videoconvert ! queue ! nvh264enc ! queue ! rtspclientsink location=rtsp://localhost:8554/40122260 t. ! queue ! videoconvert ! queue ! autovideosink
 ```
-
-## Example 7. Show video on Ubuntu desktop in Jetson. (YUV pixel format)
-
-```
-gst-launch-1.0 pylonsrc ! queue ! nvvidconv ! xvimagesink
-```
-
-## Example 8. Show video on Ubuntu desktop in Jetson. (bayer pixel format)
-
-```
-gst-launch-1.0 pylonsrc ! queue ! bayer2rgb ! queue ! nvvidconv ! xvimagesink
-```
-
-## Example 9. Convert video stream from camera to JPEG image stream to TCP port 55555. (YUV)
-```
-gst-launch-1.0 pfs-location=40257292.pfs device-serial-number="40257292" ! queue ! nvvidconv ! nvjpegenc ! queue ! tcpclientsink port=55555
-```
-
-# Notes
-
-If you are missing some libraries, here are some ways to install them:
-
-bad-plugins 
-```
-sudo apt-get install gstreamer1.0-plugins-bad
-```
-
-RTSP
-```
-sudo apt-get install gstreamer1.0-rtsp
-```
