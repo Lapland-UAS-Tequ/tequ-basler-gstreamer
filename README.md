@@ -73,7 +73,7 @@ C:\gstreamer\1.0\msvc_x86_64\bin
 ## 4. Clone Basler gst-plugin-pylon
 
 ```
-https://github.com/basler/gst-plugin-pylon
+git clone https://github.com/basler/gst-plugin-pylon
 ```
 
 ## 5. Build and install gst-plugin-pylon 
