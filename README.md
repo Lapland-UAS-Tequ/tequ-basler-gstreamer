@@ -21,8 +21,8 @@ Tested with following setup:
 | Component     | Version       |
 | ------------- |:-------------:| 
 | Windows       | 10            | 
-| Basler Pylon  | 7.2.0.25592   | 
-| Gstreamer	    | 1.20.4        | 
+| Basler Pylon  | 7.4.0.14900   | 
+| Gstreamer	    | 1.22.9        | 
 | Camera        | daa3840-45uc  | 
 | Camera        | acA2500-14gm  | 
 
@@ -39,11 +39,11 @@ Direct links:
 
 Pylon 7.2.0 Camera Software Suite:
 
-https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/Basler_pylon_7.2.0.25592.exe
+https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/basler_pylon_7.4.0.14900.exe
 
 Pylon 7.2.0 Runtime:
 
-https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/pylon_Runtime_7.2.0.25592.exe
+https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/pylon_runtime_7.4.0.14900.exe
 
 ## 2. Test your setup with Pylon viewer
 
@@ -59,9 +59,9 @@ https://gstreamer.freedesktop.org/download/
 
 Direct links:
 
-https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/gstreamer-1.0-msvc-x86_64-1.20.4.msi
+https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/gstreamer-1.0-msvc-x86_64-1.22.9.msi
 
-https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/gstreamer-1.0-devel-msvc-x86_64-1.20.4.msi
+https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/gstreamer-1.0-devel-msvc-x86_64-1.22.9.msi
 
 
 ADD following Gstreamer path to 'PATH' environment variable. For example:
