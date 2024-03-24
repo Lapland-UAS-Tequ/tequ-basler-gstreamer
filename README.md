@@ -22,7 +22,7 @@ Tested with following setup:
 | ------------- |:-------------:| 
 | Windows       | 10            | 
 | Basler Pylon  | 7.4.0.14900   | 
-| Gstreamer	    | 1.22.9        | 
+| Gstreamer	    | 1.24.1        | 
 | Camera        | daa3840-45uc  | 
 | Camera        | acA2500-14gm  | 
 
@@ -37,11 +37,11 @@ https://www.baslerweb.com/en/products/software/basler-pylon-camera-software-suit
 
 Direct links:
 
-Pylon 7.2.0 Camera Software Suite:
+Pylon 7.4.0 Camera Software Suite:
 
 https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/basler_pylon_7_4_0_14900.exe
 
-Pylon 7.2.0 Runtime:
+Pylon 7.4.0 Runtime:
 
 https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/pylon_runtime_7_4_0_14900.exe
 
