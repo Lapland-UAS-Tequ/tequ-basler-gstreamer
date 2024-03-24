@@ -59,9 +59,9 @@ https://gstreamer.freedesktop.org/download/
 
 Direct links:
 
-https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/gstreamer-1.0-msvc-x86_64-1.22.9.msi
+https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/gstreamer-1.0-msvc-x86_64-1.24.1.msi
 
-https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/gstreamer-1.0-devel-msvc-x86_64-1.22.9.msi
+https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/gstreamer-1.0-devel-msvc-x86_64-1.24.1.msi
 
 
 ADD following Gstreamer path to 'PATH' environment variable. For example:
