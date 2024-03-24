@@ -77,7 +77,59 @@ git clone https://github.com/basler/gst-plugin-pylon
 
 ## 5. Build and install gst-plugin-pylon 
 
-Follow the instructions from Basler repository for building and installing gst-plugin-pylon
+Follow the instructions from Basler repository for building and installing gst-plugin-pylon. Instructions did not work as is 24.3.2024.
+
+Here is short list of actions and commands, how building finally succeeded:
+
+Install:
+- Visual Studio Community Edition 2022 and C++ build tools
+- meson 0.63.1-64 (https://github.com/mesonbuild/meson/releases)
+- cmake 3.29 (https://cmake.org/)
+
+Open command prompt and run commands:
+```
+cd\
+```
+
+```
+md temp
+```
+
+```
+cd temp
+```
+
+```
+git clone https://github.com/basler/gst-plugin-pylon
+```
+
+```
+cd gst-plugin-pylon
+```
+
+```
+set PKG_CONFIG_PATH=%GSTREAMER_1_0_ROOT_MSVC_X86_64%lib\pkgconfig
+```
+
+```
+set PATH=%PATH%;%GSTREAMER_1_0_ROOT_MSVC_X86_64%\bin
+```
+
+```
+set CMAKE_PREFIX_PATH=C:\Program Files\Basler\pylon 7\Development\CMake\pylon\
+```
+
+```
+meson setup build --prefix=%GSTREAMER_1_0_ROOT_MSVC_X86_64%
+```
+
+```
+meson compile -C build
+```
+
+```
+ninja -C build install
+```
 
 ## 6. Pylon plugin for Gstreamer is ready to use
 
