@@ -83,10 +83,8 @@ Here is short list of actions and commands, how building finally succeeded:
 
 Install:
 - Visual Studio Community Edition 2022 and C++ build tools (https://visualstudio.microsoft.com/vs/community/)
-- meson 0.63.1-64
- - https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/meson-0.63.1-64.msi)
-- cmake 3.29
- - (https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/cmake-3.29.0-windows-x86_64.msi)
+- meson 0.63.1-64 (https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/meson-0.63.1-64.msi)
+- cmake 3.29 (https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/cmake-3.29.0-windows-x86_64.msi)
 
   
 
