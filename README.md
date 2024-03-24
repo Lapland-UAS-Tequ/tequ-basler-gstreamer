@@ -82,9 +82,9 @@ Follow the instructions from Basler repository for building and installing gst-p
 Here is short list of actions and commands, how building finally succeeded:
 
 Install:
-- Visual Studio Community Edition 2022 and C++ build tools
-- meson 0.63.1-64 (https://github.com/mesonbuild/meson/releases)
-- cmake 3.29 (https://cmake.org/)
+- Visual Studio Community Edition 2022 and C++ build tools (https://visualstudio.microsoft.com/vs/community/)
+- meson 0.63.1-64 (https://github.com/mesonbuild/meson/releases) (direct link: https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/meson-0.63.1-64.msi)
+- cmake 3.29 (https://cmake.org/) (direct link: https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/cmake-3.29.0-windows-x86_64.msi)
 
 Open command prompt and run commands:
 ```
