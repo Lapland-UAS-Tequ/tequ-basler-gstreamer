@@ -20,7 +20,6 @@ Tested with following setup:
 
 | Component     | Version       |
 | ------------- |:-------------:| 
-| Windows       | 10            | 
 | Basler Pylon  | 7.4.0.14900   | 
 | Gstreamer	    | 1.24.1        | 
 | Camera        | daa3840-45uc  | 
